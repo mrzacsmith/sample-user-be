@@ -3,10 +3,12 @@ const colors = require('colors')
 const cors = require('cors')
 const helmet = require('helmet')
 const morgan = require('morgan')
+const connectDB = require('./utils/db.js')
 
 require('dotenv').config()
 
 const server = express()
+connectDB()
 
 server.use(cors())
 server.use(helmet())
