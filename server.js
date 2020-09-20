@@ -13,7 +13,7 @@ connectDB()
 server.use(cors())
 server.use(helmet())
 server.use(morgan('dev'))
-server.use(express.json)
+server.use(express.json())
 
 let currentTime = new Date().toLocaleString('en-US', {
   timeZone: 'America/Denver',
